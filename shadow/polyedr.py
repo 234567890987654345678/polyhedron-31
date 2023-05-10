@@ -165,12 +165,15 @@ class Polyedr:
                     # количество вершин очередной грани
                     size = int(buf.pop(0))
                     # массив вершин этой грани
-                    vertexes = list(self.vertexes[int(n) - 1] for n in buf)
-                    stan_vertexes = list(self.stan_vertexes[int(n) - 1] for n in buf)
+                    vertexes = list(self.vertexes[int(n) - 1]
+                                    for n in buf)
+                    stan_vertexes = list(self.stan_vertexes[int(n) - 1]
+                                         for n in buf)
                     # задание рёбер грани
                     for n in range(size):
                         self.edges.append(Edge(vertexes[n - 1], vertexes[n]))
-                        self.stan_edges.append(Edge(stan_vertexes[n - 1], stan_vertexes[n]))
+                        self.stan_edges.append(Edge(stan_vertexes[n - 1],
+                                                    stan_vertexes[n]))
                     # задание самой грани
                     self.facets.append(Facet(vertexes))
         self.edges_uniq()

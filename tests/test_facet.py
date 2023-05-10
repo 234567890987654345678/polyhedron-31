@@ -86,5 +86,3 @@ class TestFacet:
     def test_center02(self):
         f = Facet([R3(0.0, 0.0, 0.0), R3(3.0, 0.0, 0.0), R3(0.0, 3.0, 0.0)])
         assert f.center().approx((R3(1.0, 1.0, 0.0)))
-
-
