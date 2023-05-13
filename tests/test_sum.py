@@ -25,3 +25,14 @@ class TestPolyedr:
     def test_6(self):
         assert Polyedr(f"data/test6.geom").sum_of_edges ==\
                approx(sqrt(17) / 2 + 2)
+
+    def test_7(self):
+        assert Polyedr(f"data/test7.geom").sum_of_edges == 4
+
+    def test_8(self):
+        assert Polyedr(f"data/test8.geom").sum_of_edges ==\
+               approx(sqrt(6) + 2)
+
+    def test_9(self):
+        assert Polyedr(f"data/test9.geom").sum_of_edges ==\
+               approx(sqrt(6) + (sqrt(5)) / 2 + 1)
